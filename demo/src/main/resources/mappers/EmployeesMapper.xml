@@ -27,5 +27,11 @@
 			</if>
 		</where>
 	</select>
+		
+	<select id="findAllDept"
+			resultType="DepartmentDto">
+			SELECT *
+			  FROM departments
+	</select>
 	
 </mapper>

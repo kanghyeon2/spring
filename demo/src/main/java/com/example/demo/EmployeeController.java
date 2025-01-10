@@ -14,10 +14,17 @@ public class EmployeeController {
 	@Autowired
 	EmployeesMapper employeesMapper;
 	
+	
 	@GetMapping("/emp") 
 	public String list(Model model){
 		model.addAttribute("empList", employeesMapper.findAll());
 		return "empList";
+	}
+	
+	@GetMapping("/dept") 
+	public String listDept(Model model){
+		model.addAttribute("deptList", employeesMapper.findAllDept());
+		return "deptList";
 	}
 	
 	@ResponseBody //데이터값 json으로

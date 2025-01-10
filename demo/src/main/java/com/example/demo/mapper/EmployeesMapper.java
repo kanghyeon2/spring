@@ -12,4 +12,8 @@ public interface EmployeesMapper {
 
 	List<EmployeesDto> findBydeptAndName(@Param("departmentId")Long departmentId, //@param이 mapper에 있는 id
 									@Param("firstName")String firstName);
+	
+	List<DepartmentDto> findAllDept();
+	
+	
 }
